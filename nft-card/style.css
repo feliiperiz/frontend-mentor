@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --blue-main: hsl(217, 54%, 11%);
+  --blue-card: hsl(216, 50%, 16%);
+  --blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-main);
+}
+
+.card {
+  display: grid;
+  width: 350px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: var(--blue-card);
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  position: relative;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image:hover::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  top: 140px;
+  background-image: url("./images/icon-view.svg");
+  position: absolute;
+  z-index: 1;
+}
+
+.texto h1 {
+  font-size: 20px;
+  margin-left: 25px;
+  margin-top: 0;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.texto h1:hover {
+  color: var(--cyan);
+}
+
+.texto p {
+  font-size: 18px;
+  margin-left: 25px;
+  margin-right: 15px;
+  margin-top: 0;
+  color: var(--blue);
+}
+
+.dados {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 25px 0 25px;
+  font-size: 14px;
+}
+
+.infos:nth-child(1) {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  color: var(--cyan);
+}
+
+.infos:nth-child(2) {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  color: var(--blue);
+}
+
+.rodape {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-top: 1px solid var(--blue-line);
+}
+
+.rodape img {
+  align-self: center;
+  max-width: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+.rodape p {
+  margin-left: 15px;
+  color: var(--blue);
+  font-size: 15px;
+}
+
+.rodape spam {
+  cursor: pointer;
+  color: var(--white);
+}
+
+.rodape spam:hover {
+  color: var(--cyan);
+}
